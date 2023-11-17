@@ -8,10 +8,10 @@ export default {
 }
 </script>
 <template>
-    <div class="card">
+    <div class="card h-100 border-dark">
 
         <!-- card header -->
-        <div class="card-header">
+        <div class="card-header bg-info border-dark">
             <h4>
                 {{ project.title }}
             </h4>
@@ -23,20 +23,20 @@ export default {
         <!-- card body -->
         <div class="card-body">
             <img class="img-fluid rounded" :src="'http://127.0.0.1:8000/storage/' + project.cover_image" alt="">
-            <p class="pt-3">
+            <p class="pt-3 text-truncate">
                 {{ project.description }}
             </p>
         </div>
 
         <!-- card footer -->
-        <div class="card-footer py-3 d-flex justify-content-between">
+        <div class="card-footer bg-dark border-dark py-3 d-flex justify-content-between">
             <div class="col-8">
                 <span v-for="technology in project.technologies" class="p-2 badge bg-info me-1 mb-1">
                     {{ technology.name }}
                 </span>
             </div>
-            <div>
-                <a :href="project.git_link" class="me-2 text-dark">
+            <div class="d-flex align-items-center">
+                <a :href="project.git_link" class="me-2 text-light">
                     <i class="fa-brands fa-github fa-2xl"></i>
                 </a>
                 <a :href="project.project_link" class="text-success">

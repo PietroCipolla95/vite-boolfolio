@@ -34,14 +34,14 @@ export default {
 <template>
   <AppHeader />
 
-  <main class="min-vh-100">
+  <main class="py-5 min-vh-100">
     <div class="container">
 
       <h1 class="text-center pb-3 mb-5 border-bottom border-info">
         My Projects
       </h1>
 
-      <div class="row">
+      <div class="row gy-5">
         <div class="col-4" v-for="project in   this.projects  ">
 
           <AppCard :project="project" />

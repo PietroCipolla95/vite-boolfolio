@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <header class="mb-4">
+    <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <div class="container">
                 <div class="nav navbar-nav">
