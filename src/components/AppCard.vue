@@ -11,7 +11,7 @@ export default {
     <div class="card h-100 border-dark">
 
         <!-- card header -->
-        <div class="card-header bg-info border-dark">
+        <div class="card-header h-100 bg-info border-dark">
             <h4>
                 {{ project.title }}
             </h4>
@@ -22,14 +22,16 @@ export default {
 
         <!-- card body -->
         <div class="card-body">
+
             <img class="img-fluid rounded" :src="'http://127.0.0.1:8000/storage/' + project.cover_image" alt="">
-            <p class="pt-3 text-truncate">
+
+            <p class="mt-3 p-2 border-start border-2 border-dark text-truncate">
                 {{ project.description }}
             </p>
         </div>
 
         <!-- card footer -->
-        <div class="card-footer bg-dark border-dark py-3 d-flex justify-content-between">
+        <div class="card-footer h-100 bg-dark border-dark py-3 d-flex align-items-center justify-content-between">
             <div class="col-8">
                 <span v-for="technology in project.technologies" class="p-2 badge bg-info me-1 mb-1">
                     {{ technology.name }}
