@@ -37,13 +37,15 @@ export default {
   <main class="min-vh-100">
     <div class="container">
 
-      <h1 class="text-center pb-4">
+      <h1 class="text-center pb-3 mb-5 border-bottom border-info">
         My Projects
       </h1>
 
       <div class="row">
         <div class="col-4" v-for="project in   this.projects  ">
+
           <AppCard :project="project" />
+
         </div>
       </div>
     </div>

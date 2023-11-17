@@ -35,7 +35,7 @@ export default {
                     {{ technology.name }}
                 </span>
             </div>
-            <div class="d-flex align-items-end">
+            <div>
                 <a :href="project.git_link" class="me-2 text-dark">
                     <i class="fa-brands fa-github fa-2xl"></i>
                 </a>
