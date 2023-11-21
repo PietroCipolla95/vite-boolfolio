@@ -6,6 +6,8 @@ import AppAbout from './views/AppAbout.vue';
 import AppProjects from './views/AppProjects.vue';
 import SingleProject from './views/SingleProject.vue';
 import NotFound from './views/NotFound.vue';
+import SingleTechnologyView from './views/SingleTechnologyView.vue';
+import SingleTypeView from './views/SingleTypeView.vue';
 
 
 const router = createRouter({
@@ -41,7 +43,18 @@ const router = createRouter({
             name: 'NotFound',
             component: NotFound
 
-        }
+        },
+        {
+            path: '/technologies/:id',
+            name: 'technologies',
+            component: SingleTechnologyView
+        },
+
+        {
+            path: '/types/:id',
+            name: 'types',
+            component: SingleTypeView
+        },
     ]
 });
 
