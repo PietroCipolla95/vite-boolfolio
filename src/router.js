@@ -5,6 +5,7 @@ import AppContacts from './views/AppContacts.vue';
 import AppAbout from './views/AppAbout.vue';
 import AppProjects from './views/AppProjects.vue';
 import SingleProject from './views/SingleProject.vue';
+import NotFound from './views/NotFound.vue';
 
 
 const router = createRouter({
@@ -34,6 +35,12 @@ const router = createRouter({
             path: '/projects/:slug',
             name: 'single-project',
             component: SingleProject
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'NotFound',
+            component: NotFound
+
         }
     ]
 });
