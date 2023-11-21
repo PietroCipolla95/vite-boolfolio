@@ -4,6 +4,7 @@ import AppHome from './views/AppHome.vue';
 import AppContacts from './views/AppContacts.vue';
 import AppAbout from './views/AppAbout.vue';
 import AppProjects from './views/AppProjects.vue';
+import SingleProject from './views/SingleProject.vue';
 
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
             path: '/projects',
             name: 'projects',
             component: AppProjects
+        },
+        {
+            path: '/projects/:slug',
+            name: 'single-project',
+            component: SingleProject
         }
     ]
 });

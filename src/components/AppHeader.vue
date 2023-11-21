@@ -9,8 +9,9 @@ export default {
             <div class="container">
                 <div class="nav navbar-nav">
                     <router-link class="nav-item nav-link" to="/">Home</router-link>
-                    <router-link class="nav-item nav-link" to="/contacts">Contacts</router-link>
+                    <router-link class="nav-item nav-link" to="/projects">Projects</router-link>
                     <router-link class="nav-item nav-link" to="/about">About</router-link>
+                    <router-link class="nav-item nav-link" to="/contacts">Contacts</router-link>
                 </div>
             </div>
         </nav>

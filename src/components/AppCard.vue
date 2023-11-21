@@ -12,9 +12,12 @@ export default {
 
         <!-- card header -->
         <div class="card-header h-100 bg-info border-dark">
-            <h4>
-                {{ project.title }}
-            </h4>
+            <router-link class="text-dark" :to="{ name: 'single-project', params: { slug: this.project.slug } }">
+                <h4>
+                    {{ project.title }}
+                </h4>
+            </router-link>
+
             <span class="badge bg-dark">
                 {{ project.type.name }}
             </span>
@@ -33,7 +36,7 @@ export default {
         <!-- card footer -->
         <div class="card-footer h-100 bg-dark border-dark py-3 d-flex align-items-center justify-content-between">
             <div class="col-8">
-                <span v-for="technology in project.technologies" class="p-2 badge bg-info me-1 mb-1">
+                <span v-for=" technology  in  project.technologies " class="p-2 badge bg-info me-1 mb-1">
                     {{ technology.name }}
                 </span>
             </div>
