@@ -1,31 +1,20 @@
 <script>
 
-import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-import AppCard from './components/AppCard.vue';
 
 export default {
+  name: 'App',
   data() {
     return {
-      projects_api: 'http://127.0.0.1:8000/api/projects',
-      projects: [],
+
     }
   },
 
   components: {
     AppHeader,
     AppFooter,
-    AppCard,
   },
-
-  mounted() {
-    axios
-      .get(this.projects_api)
-      .then(response => {
-        this.projects = response.data.projects.data;
-      })
-  }
 
 }
 
@@ -35,20 +24,9 @@ export default {
   <AppHeader />
 
   <main class="py-5 min-vh-100">
-    <div class="container">
 
-      <h1 class="text-center pb-3 mb-5 border-bottom border-info">
-        My Projects
-      </h1>
+    <router-view></router-view>
 
-      <div class="row gy-5">
-        <div class="col-4" v-for="project in   this.projects  ">
-
-          <AppCard :project="project" />
-
-        </div>
-      </div>
-    </div>
   </main>
 
   <AppFooter />

@@ -5,11 +5,12 @@ export default {
 </script>
 <template>
     <header>
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <nav class="navbar navbar-expand navbar-dark bg-dark py-3">
             <div class="container">
                 <div class="nav navbar-nav">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">Contacts</a>
+                    <router-link class="nav-item nav-link" to="/">Home</router-link>
+                    <router-link class="nav-item nav-link" to="/contacts">Contacts</router-link>
+                    <router-link class="nav-item nav-link" to="/about">About</router-link>
                 </div>
             </div>
         </nav>
