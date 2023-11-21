@@ -9,7 +9,10 @@ export default {
     data() {
         return {
             projects_api: 'http://127.0.0.1:8000/api/projects',
+            url: 'http://127.0.0.1:8000',
             projects: [],
+            technologies: [],
+            types: [],
             loading: true,
         }
     },
@@ -23,6 +26,23 @@ export default {
                 this.projects = response.data.projects.data;
                 this.loading = false;
             })
+
+        axios.get(this.url + '/api/technologies').then(response => {
+            console.log(response);
+            this.technologies = response.data.result
+            console.log(this.technologies);
+        })
+
+        axios.get(this.url + '/api/types').then(response => {
+            console.log(response);
+            this.types = response.data.result
+            console.log(this.types);
+        })
+
+            .catch(error => {
+                console.log(error);
+            })
+
     },
     components: {
         AppCard,
@@ -36,16 +56,45 @@ export default {
         <div class="container">
 
 
-
             <h1 class="pb-3 mb-5 border-bottom border-info">
                 My Projects
             </h1>
 
-            <div class="row gy-5">
-                <div class="col-4" v-for="project in   this.projects  ">
+            <div class="row">
+                <div class="col-9">
+                    <div class="row gy-5">
+                        <div class="col-4" v-for="project in   this.projects  ">
 
-                    <AppCard :project="project" />
+                            <AppCard :project="project" />
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Technologies
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li v-for="technology in technologies">
+                                    {{ technology.name }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Types
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li v-for="type in types">
+                                    {{ type.name }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

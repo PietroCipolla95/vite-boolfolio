@@ -1,13 +1,13 @@
 <script>
+
+import axios from 'axios';
+import AppCard from '../components/AppCard.vue';
+
 export default {
     name: 'SingleTypeView'
 }
 </script>
-<template>
-    <div>
-
-    </div>
-</template>
+<template></template>
 
 
 <style lang="scss" scoped></style>
