@@ -1,42 +1,19 @@
 <script>
-
-import axios from 'axios';
-
-import AppCard from '../components/AppCard.vue';
-
 export default {
     name: 'AppHome',
-    data() {
-        return {
-            projects_api: 'http://127.0.0.1:8000/api/projects',
-            projects: [],
-        }
-    },
-    mounted() {
-        axios
-            .get(this.projects_api)
-            .then(response => {
-                this.projects = response.data.projects.data;
-            })
-    },
-    components: {
-        AppCard,
-    }
-
 }
 </script>
 <template>
     <div class="container">
 
-        <h1 class="pb-3 mb-5 border-bottom border-info">
-            My Projects
-        </h1>
-
-        <div class="row gy-5">
-            <div class="col-4" v-for="project in   this.projects  ">
-
-                <AppCard :project="project" />
-
+        <div class="p-5 mb-4 rounded-4 bg-dark text-light">
+            <div class="container py-5">
+                <h1 class="display-5 fw-bold mb-5">
+                    Welcome to my portfolio!
+                </h1>
+                <router-link to="/projects" class="btn btn-outline-info fw-bold fs-5">
+                    Take a look at my projects!
+                </router-link>
             </div>
         </div>
     </div>
