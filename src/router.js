@@ -46,13 +46,13 @@ const router = createRouter({
         },
         {
             path: '/technologies/:id',
-            name: 'technologies',
+            name: 'single-technology',
             component: SingleTechnologyView
         },
 
         {
             path: '/types/:id',
-            name: 'types',
+            name: 'single-type',
             component: SingleTypeView
         },
     ]

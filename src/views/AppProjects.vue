@@ -17,6 +17,7 @@ export default {
         }
     },
     components: {
+        AppCard,
         AppLoader,
     },
     mounted() {
@@ -61,36 +62,42 @@ export default {
             </h1>
 
             <div class="row">
+
+                <!-- projects cards -->
                 <div class="col-9">
                     <div class="row gy-5">
-                        <div class="col-4" v-for="project in   this.projects  ">
-
-                            <AppCard :project="project" />
-
-                        </div>
+                        <AppCard :project="project" v-for="project in this.projects" />
                     </div>
                 </div>
+
+                <!-- types and technologies -->
                 <div class="col-3">
-                    <div class="card mb-3">
+                    <div class="card border-dark mb-3">
                         <div class="card-header">
                             Technologies
                         </div>
                         <div class="card-body">
-                            <ul>
+                            <ul class="list-unstyled">
                                 <li v-for="technology in technologies">
-                                    {{ technology.name }}
+                                    <router-link :to="{ name: 'single-technology', params: { id: technology.id } }"
+                                        class="link-dark link-underline-info">
+                                        {{ technology.name }}
+                                    </router-link>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card border-dark">
                         <div class="card-header">
                             Types
                         </div>
                         <div class="card-body">
-                            <ul>
+                            <ul class="list-unstyled">
                                 <li v-for="type in types">
-                                    {{ type.name }}
+                                    <router-link :to="{ name: 'single-type', params: { id: type.id } }"
+                                        class="link-dark link-underline-info">
+                                        {{ type.name }}
+                                    </router-link>
                                 </li>
                             </ul>
                         </div>
