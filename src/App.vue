@@ -23,7 +23,7 @@ export default {
 <template>
   <AppHeader />
 
-  <main class="py-5 min-vh-100">
+  <main class="py-5">
 
     <router-view></router-view>
 

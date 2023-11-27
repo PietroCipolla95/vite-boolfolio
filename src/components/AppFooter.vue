@@ -4,13 +4,13 @@ export default {
 }
 </script>
 <template>
-    <footer class="bg-dark py-5">
+    <!-- <footer class="bg-dark py-5">
 
         <h2 class="text-light text-center">
             Made by Pietro Cipolla 2023
         </h2>
 
-    </footer>
+    </footer> -->
 </template>
 
 

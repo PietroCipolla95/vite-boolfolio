@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <header>
+    <!-- <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark py-3">
             <div class="container">
                 <div class="nav navbar-nav">
@@ -15,7 +15,7 @@ export default {
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
 </template>
 
 
