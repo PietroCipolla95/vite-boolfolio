@@ -1,10 +1,30 @@
 @use '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-
 body {
     background-image: url(../images/abstract_squares_wallpaper_minimalist_by_djraspberry1999_deapio7.png);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .my_color {
     color: #CC2680;
+}
+
+.my_border_bottom {
+    background: rgb(228, 36, 125);
+    background: -moz-linear-gradient(324deg, rgba(228, 36, 125, 1) 29%, rgba(126, 44, 141, 1) 70%);
+    background: -webkit-linear-gradient(324deg, rgba(228, 36, 125, 1) 29%, rgba(126, 44, 141, 1) 70%);
+    background: linear-gradient(324deg, rgba(228, 36, 125, 1) 29%, rgba(126, 44, 141, 1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e4247d", endColorstr="#7e2c8d", GradientType=1);
+    height: 2px;
+}
+
+.my_border {
+    border-left: 5px solid #CC2680;
+}
+
+.my_bg {
+    background-color: #CC2680;
 }

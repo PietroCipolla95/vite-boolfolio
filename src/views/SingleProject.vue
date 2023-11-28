@@ -49,7 +49,11 @@ export default {
         <div class="container">
 
             <!-- project banner -->
-            <div class="bg-dark text-light rounded-5 p-4 mb-5 d-flex align-items-center justify-content-evenly">
+            <div class="bg-dark text-light rounded-5 my_border p-4 mb-5 d-flex align-items-center justify-content-evenly">
+                <router-link to="/projects" class="btn btn-secondary fw-bold">
+                    <i class="fa-solid fa-angles-left"></i>
+                    Projects
+                </router-link>
                 <h2>
                     {{ this.project.title }}
                 </h2>
@@ -57,7 +61,7 @@ export default {
                     <span class="p-2 badge bg-secondary me-3">
                         {{ this.project.type.name }}
                     </span>
-                    <span v-for=" technology  in  project.technologies " class="p-2 badge bg-info me-1">
+                    <span v-for=" technology  in  project.technologies " class="p-2 badge my_bg me-1">
                         {{ technology.name }}
                     </span>
                 </div>
@@ -82,7 +86,7 @@ export default {
 
                     <!-- link wrapper -->
                     <div class="d-flex align-items-center justify-content-end">
-                        <a :href="project.git_link" class="me-2 text-dark">
+                        <a :href="project.git_link" class="me-2 text-light">
                             <i class="fa-brands fa-github fa-2xl"></i>
                         </a>
                         <a :href="project.project_link" class="text-success">

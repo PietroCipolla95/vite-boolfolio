@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import AppCard from '../components/AppCard.vue';
 import AppLoader from '../components/AppLoader.vue';
+import AppHeader from '../components/AppHeader.vue';
 
 export default {
     name: 'AppProjects',
@@ -19,6 +20,7 @@ export default {
     components: {
         AppCard,
         AppLoader,
+        AppHeader
     },
     mounted() {
         axios
@@ -47,7 +49,8 @@ export default {
     },
     components: {
         AppCard,
-        AppLoader
+        AppLoader,
+        AppHeader
     }
 
 }
@@ -57,53 +60,60 @@ export default {
         <div class="container">
 
 
-            <h1 class="pb-3 mb-5 border-bottom border-info">
-                My Projects
-            </h1>
+            <div class="wrapper pb-2 d-flex justify-content-between align-items-baseline">
+                <h1 class="text-light">
+                    My Projects
+                </h1>
+                <AppHeader />
+            </div>
+
+            <div class="my_border_bottom mb-5"></div>
+
 
             <div class="row">
 
                 <!-- projects cards -->
-                <div class="col-9">
+                <div class="col-10">
                     <div class="row gy-5">
                         <AppCard :project="project" v-for="project in this.projects" />
                     </div>
                 </div>
 
                 <!-- types and technologies -->
-                <div class="col-3">
-                    <div class="card border-dark mb-3">
-                        <div class="card-header">
+                <div class="col-2 text-center">
+
+                    <div class="filters_wrapper card bg-dark py-4">
+
+                        <h4 class="my_color">
                             Technologies
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li v-for="technology in technologies">
-                                    <router-link :to="{ name: 'single-technology', params: { id: technology.id } }"
-                                        class="link-dark link-underline-info">
-                                        {{ technology.name }}
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card border-dark">
-                        <div class="card-header">
+                        </h4>
+
+                        <ul class="list-unstyled">
+                            <li v-for="technology in technologies" class="py-1">
+                                <router-link :to="{ name: 'single-technology', params: { id: technology.id } }"
+                                    class="link-light">
+                                    {{ technology.name }}
+                                </router-link>
+                            </li>
+                        </ul>
+
+                        <h4 class="my_color">
                             Types
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li v-for="type in types">
-                                    <router-link :to="{ name: 'single-type', params: { id: type.id } }"
-                                        class="link-dark link-underline-info">
-                                        {{ type.name }}
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </div>
+                        </h4>
+
+                        <ul class="list-unstyled">
+                            <li v-for="single_type in types" class="py-1">
+                                <router-link :to="{ name: 'single-type', params: { id: single_type.id } }"
+                                    class="link-light">
+                                    {{ single_type.name }}
+                                </router-link>
+                            </li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -113,4 +123,10 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/app.scss';
+
+a {
+    text-decoration: none;
+}
+</style>

@@ -1,13 +1,25 @@
 <script>
+import AppHeader from '../components/AppHeader.vue';
+
 export default {
-    name: 'AppContacts'
+    name: 'AppContacts',
+
+    components: {
+        AppHeader,
+    }
 }
 </script>
 <template>
     <div class="container">
-        <h1 class="border-bottom border-info pb-3">
-            Contact me!
-        </h1>
+
+        <div class="wrapper pb-2 d-flex justify-content-between align-items-baseline">
+            <h1 class="text-light">
+                Contact
+            </h1>
+            <AppHeader />
+        </div>
+
+        <div class="my_border_bottom mb-5"></div>
         <div class="py-3">
             <p>
                 <i class="fa-solid fa-envelope fa-xl"></i>

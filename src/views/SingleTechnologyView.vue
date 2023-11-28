@@ -3,12 +3,14 @@
 import axios from 'axios';
 import AppCard from '../components/AppCard.vue';
 import AppLoader from '../components/AppLoader.vue';
+import AppHeader from '../components/AppHeader.vue';
 
 export default {
     name: 'SingleTechnologyView',
     components: {
         AppCard,
         AppLoader,
+        AppHeader,
     },
     data() {
         return {
@@ -49,12 +51,21 @@ export default {
     <div v-if="!loading">
         <div class="container">
 
-            <h1 v-if="technology" class="bg-dark rounded-4 border-5 border-start border-info py-4 ps-4 mb-5 text-light">
-                Projects in
-                <span class="text-info fw-bold">
-                    {{ technology.name }}
-                </span>
-            </h1>
+            <div v-if="technology">
+
+                <div class="wrapper pb-2 d-flex justify-content-between align-items-baseline">
+                    <h1 class="text-light">
+                        Projects in
+                        <span class="my_color fw-bold">
+                            {{ technology.name }}
+                        </span>
+                    </h1>
+                    <AppHeader />
+                </div>
+
+                <div class="my_border_bottom mb-5"></div>
+
+            </div>
 
 
             <div class="row">

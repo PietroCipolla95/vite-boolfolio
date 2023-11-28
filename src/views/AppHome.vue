@@ -1,10 +1,17 @@
 <script>
+
+import AppHeader from '../components/AppHeader.vue';
+
 export default {
     name: 'AppHome',
+
+    components: {
+        AppHeader,
+    }
 }
 </script>
 <template>
-    <div class="container">
+    <div class="container d-flex justify-content-between">
 
         <div class="mb-4 rounded-4 text-light w-50 my_border">
             <div class="container p-5">
@@ -21,15 +28,14 @@ export default {
                 </router-link>
             </div>
         </div>
+
+        <AppHeader />
+
     </div>
 </template>
 
 
 <style lang="scss" scoped>
-.my_border {
-    border-left: 5px solid #CC2680;
-}
-
 .my_btn {
     border: 1px solid #CC2680;
     padding: .7rem;
@@ -39,8 +45,6 @@ export default {
     &:hover {
         background-color: #CC2680;
         color: black;
-
     }
-
 }
 </style>

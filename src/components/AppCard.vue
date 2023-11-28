@@ -10,9 +10,9 @@ export default {
         <div class="card h-100 border-dark">
 
             <!-- card header -->
-            <div class="card-header h-100 bg-info border-dark">
+            <div class="card-header bg-secondary">
                 <router-link class="text-dark" :to="{ name: 'single-project', params: { slug: this.project.slug } }">
-                    <h4>
+                    <h4 class="text-truncate">
                         {{ project.title }}
                     </h4>
                 </router-link>
@@ -27,7 +27,7 @@ export default {
 
                 <img class="img-fluid rounded" :src="'http://127.0.0.1:8000/storage/' + project.cover_image" alt="">
 
-                <p class="mt-3 p-2 border-start border-2 border-dark text-truncate">
+                <p class="mt-3 p-2 text-truncate">
                     {{ project.description }}
                 </p>
             </div>
@@ -35,7 +35,7 @@ export default {
             <!-- card footer -->
             <div class="card-footer h-100 bg-dark border-dark py-3 d-flex align-items-center justify-content-between">
                 <div class="col-8">
-                    <span v-for=" technology  in  project.technologies " class="p-2 badge bg-info me-1 mb-1">
+                    <span v-for=" technology  in  project.technologies " class="p-2 badge my_bg me-1 mb-1">
                         {{ technology.name }}
                     </span>
                 </div>

@@ -21,8 +21,6 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-
   <main class="py-5">
 
     <router-view></router-view>
