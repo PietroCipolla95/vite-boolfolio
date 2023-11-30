@@ -68,85 +68,85 @@ export default {
 
 .item:nth-child(1) {
     margin-top: 6.25em;
-    color: #fe1e52;
+    color: #8F2B8A;
     animation-delay: -1.2s;
 }
 
 .item:nth-child(1):before {
-    color: #ff6488;
+    color: #c26dbe;
 }
 
 .item:nth-child(1):after {
-    color: #ff416d;
+    color: #a1399c;
 }
 
 .item:nth-child(2) {
     margin-top: 3.125em;
-    color: #fe4252;
+    color: #8f42b1;
     animation-delay: -1s;
 }
 
 .item:nth-child(2):before {
-    color: #ff8892;
+    color: #c553bf;
 }
 
 .item:nth-child(2):after {
-    color: #ff6572;
+    color: #ac3ca6;
 }
 
 .item:nth-child(3) {
     margin-top: 0em;
-    color: #fe6553;
+    color: #ac2796;
     animation-delay: -0.8s;
 }
 
 .item:nth-child(3):before {
-    color: #ffa499;
+    color: #ac409a;
 }
 
 .item:nth-child(3):after {
-    color: #ff8476;
+    color: #a73193;
 }
 
 .item:nth-child(4) {
     margin-top: -3.125em;
-    color: #fe8953;
+    color: #c20b60;
     animation-delay: -0.6s;
 }
 
 .item:nth-child(4):before {
-    color: #ffb999;
+    color: #d14c8a;
 }
 
 .item:nth-child(4):after {
-    color: #ffa176;
+    color: #d13d82;
 }
 
 .item:nth-child(5) {
     margin-top: -6.25em;
-    color: #feac54;
+    color: #c9196e;
     animation-delay: -0.4s;
 }
 
 .item:nth-child(5):before {
-    color: #ffce9a;
+    color: #d6428a;
 }
 
 .item:nth-child(5):after {
-    color: #ffbd77;
+    color: #d43783;
 }
 
 .item:nth-child(6) {
     margin-top: -9.375em;
-    color: #fed054;
+    color: #CC2680;
     animation-delay: -0.2s;
 }
 
 .item:nth-child(6):before {
-    color: #ffe49a;
+    color: #c93c89;
 }
 
 .item:nth-child(6):after {
-    color: #ffda77;
+    color: #ca3788;
 }
 </style>
