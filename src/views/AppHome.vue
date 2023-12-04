@@ -11,9 +11,9 @@ export default {
 }
 </script>
 <template>
-    <div class="container d-flex justify-content-between">
+    <div class="container d-flex justify-content-between vh-100">
 
-        <div class="mb-4 rounded-4 text-light w-50 my_border">
+        <div class="mb-4 rounded-4 text-light w-50 my_border align-self-center">
             <div class="container p-5">
                 <h1 class="display-5 fw-bold mb-5">
                     I'm Pietro Cipolla, <br>
@@ -40,7 +40,7 @@ export default {
     border: 1px solid #CC2680;
     padding: .7rem;
     color: #CC2680;
-    transition: all .6s ease-in-out;
+    transition: all .3s ease-in-out;
 
     &:hover {
         background-color: #CC2680;

@@ -259,7 +259,6 @@ form {
     }
 }
 
-
 .contact_section {
     border: 1px solid #CC2680;
     border-left: 1px solid #7F2C8D;
@@ -270,9 +269,11 @@ form {
         margin-left: 1rem;
         text-decoration: none;
         color: white;
+        transition: .1s ease-in-out;
 
         &:hover {
-            color: #CC2680;
+            color: #7F2C8D;
+            font-weight: 700;
         }
     }
 }
